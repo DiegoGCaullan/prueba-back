@@ -15,7 +15,7 @@ async function register(req, res) {
     email: email.toLowerCase(),
     password: password,
     active: false,
-    role: "user",
+    role: "admin",
   });
 
   // encripto la constraseña

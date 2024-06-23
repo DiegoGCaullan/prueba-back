@@ -13,7 +13,8 @@ app.use(cors());
 // importar rutas
 const authRoutes = require("./router/auth");
 const userRoutes = require("./router/user");
-const movieRoutes = require("./router/movie");
+const encuestaRoutes = require("./router/encuesta");
+const respuestasRoutes = require("./router/respuesta");
 
 // configurar body parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -25,6 +26,7 @@ app.use(express.static("uploads"));
 // configurar rutas
 app.use(`/api/${apiVersion}`, authRoutes);
 app.use(`/api/${apiVersion}`, userRoutes);
-app.use(`/api/${apiVersion}`, movieRoutes);
+app.use(`/api/${apiVersion}`, encuestaRoutes);
+app.use(`/api${apiVersion}`, respuestasRoutes);
 
 module.exports = app;
